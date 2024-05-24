@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using UsersProducts.Data;
 
 namespace UsersProducts.Areas.Identity.Data
 {
@@ -6,6 +8,8 @@ namespace UsersProducts.Areas.Identity.Data
     {
         public static async Task Initialize(IServiceProvider serviceProvider)
         {
+            var context = serviceProvider.GetRequiredService<UsersProductsContext>();
+            context.Database.Migrate();
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             string[] roleNames = { "Admin", "User" };
             IdentityResult roleResult;

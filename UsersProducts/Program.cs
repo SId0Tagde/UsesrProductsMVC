@@ -8,6 +8,7 @@ using UsersProducts.Services;
 using Serilog.Events;
 using Serilog;
 using Microsoft.AspNetCore.Authentication;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
