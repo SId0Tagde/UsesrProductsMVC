@@ -13,7 +13,10 @@ then click on Home button to go to login page, and then enter the credentials an
 
 8.After you have login when you click on Home page it will not go to login page, you have to first signout then it will redirect to login page,
 After Addition,edition and deletion when you click on Home buttion it will go to homepage.
+
 9.There is signout button which displays only when the user is authenticated.
+
 10. For role purpose authorization I had used custom authorization.
-11. For logging to file I have use serilog logger.
+
+12. For logging to file I have use serilog logger.
     
